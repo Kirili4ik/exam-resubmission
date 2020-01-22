@@ -1,0 +1,13 @@
+Jeffery Amos
+Caius Mueller;acc;fellow;101;Lila Haigh;Tue;Thu;Fri
+Aleah Walters;it;prog;102;Sumayya Munoz;Mon;Wed;Sat
+Maria Lane;it;prog;102;Sumayya Munoz;Tue;Thu;Sun
+Jeffery Amos;acc;head;;;Mon;Tue;Wed;Thu;Fri
+Chantal Shannon;acc;fellow;103;Lila Haigh;Mon;Wed;Sat
+Sumayya Munoz;it;head;;;Mon;Wed;Sat
+Usaamah Appleton;crm;fellow;103;Brendon Rangel;Mon;Tue;Wed
+Lila Haigh;acc;mngr;104;Jeffery Amos;Mon;Tue;Thu;Fri;Sat
+Asiyah Joseph;crm;head;;;Mon;Tue;Wed;Fri;Sat;Sun
+Reese Craft;office;head;;;Mon;Tue;Wed;Thu;Fri
+Brendon Rangel;crm;mngr;104;Asiyah Joseph;Mon;Tue;Wed;Thu;Fri;Sat;Sun
+Arjun Swan;crm;fellow;101;Asiyah Joseph;Thu;Sat;Sun
