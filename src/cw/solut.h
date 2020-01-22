@@ -13,6 +13,10 @@
 #include <vector>
 #include <set>
 #include <map>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 // Custom types
 
@@ -43,7 +47,7 @@ typedef Str2StrSet DepartEmplMap;
 
 // prototypes
 NameEmployeeMap loadEmployeeData(std::istream& istr);
-DepartEmplMap GroupByDepartents(const NameEmployeeMap& team);
+DepartEmplMap groupByDepartents(const NameEmployeeMap& team);
 void printDepartEmplMap(std::ostream& ostr, const DepartEmplMap& depList,
                                  const NameEmployeeMap& team);
 void outputStrSet(std::ostream& ostr, const StrSet& ss);
