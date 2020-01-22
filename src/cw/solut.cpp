@@ -99,7 +99,7 @@ NameEmployeeMap loadEmployeeData(std::istream& istr)
  *      "office" → { "Reese Craft" }
  *      ...
  */
-DepartEmplMap GroupByDepartents(const NameEmployeeMap& team)
+DepartEmplMap groupByDepartents(const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
 }
