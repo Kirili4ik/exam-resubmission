@@ -1,12 +1,12 @@
-Caius Mueller;acc;fellow;101;Lila Haigh;Tue;Thu;Fri
-Aleah Walters;it;prog;102;Sumayya Munoz;Mon;Wed;Sat
-Maria Lane;it;prog;102;Sumayya Munoz;Tue;Thu;Sun
-Jeffery Amos;acc;head;;;Mon;Tue;Wed;Thu;Fri
-Chantal Shannon;acc;fellow;103;Lila Haigh;Mon;Wed;Sat
-Sumayya Munoz;it;head;;;Mon;Wed;Sat
-Usaamah Appleton;crm;fellow;103;Brendon Rangel;Mon;Tue;Wed
-Lila Haigh;acc;mngr;104;Jeffery Amos;Mon;Tue;Thu;Fri;Sat
-Asiyah Joseph;crm;head;;;Mon;Tue;Wed;Fri;Sat;Sun
-Reese Craft;office;head;;;Mon;Tue;Wed;Thu;Fri
-Brendon Rangel;crm;mngr;104;Asiyah Joseph;Mon;Tue;Wed;Thu;Fri;Sat;Sun
-Arjun Swan;crm;fellow;101;Asiyah Joseph;Thu;Sat;Sun
+Liyah Rosas;fellow;Manuel Carson;500;less than 3 years;Tue;Thu
+Keagan Ahmed;prog;Atticus Reynolds;990;3 to 5 years;Mon;Wed;Sat
+Louisa Barton;prog;Atticus Reynolds;900;3 to 5 years;Tue;Thu;Sun
+Harry Acosta;head;;500;less than 3 years;Mon;Tue;Wed;Thu;Fri
+Leilani Kouma;fellow;Manuel Carson;450;3 to 5 years;Mon;Wed;Sat
+Atticus Reynolds;head;;400;6 to 8 years;Mon;Wed;Fri;Sat
+Vanesa Allen;fellow;Shirley Roberts;330;6 to 8 years;Mon;Tue;Wed
+Manuel Carson;mngr;Harry Acosta;550;6 to 8 years;Mon;Tue;Thu;Fri;Sat
+Wyatt Richards;head;;1200;more than 8 years;Mon;Tue;Wed;Fri;Sat;Sun
+Shanai Bowman;head;;1000;more than 8 years;Mon;Tue;Wed;Thu;Fri
+Shirley Roberts;mngr;Wyatt Richards;700;6 to 8 years;Mon;Tue;Wed;Thu;Fri;Sat;Sun
+Francis Mclaughlin;fellow;Wyatt Richards;300;less than 3 years;Thu;Sat;Sun
