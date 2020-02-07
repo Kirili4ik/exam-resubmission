@@ -117,19 +117,21 @@ ExpEmplMap groupByExp(const NameEmployeeMap& team)
  * Cost: »»»0.35«««
  *
  * Function outputs experience and then a set of employees with such
- * a level of experience. Employees are output using the following rules:
+ * a level of experience (alphabetical order). Employees are output 
+ * using the following rules:
  *  - the alphabetical order of employee names is used;
  *  - one employee per line preceded by a tab ('\t') character;
  *  - the employee's name is succeded by the employee's position, separated by
  *    a comma with a space; then a semicolon character with a space. Then daily rate, 
- *    salary for a day of work with "$" suffix, followed by a comma and a space. Then
+ *    salary for a day of work with "$" suffix. For ex.: if salary is 300 (a week)
+ *    with 3 days of work, this field should be "100$" followed by a comma and a space. Then
  *    a number of working days.
  *
  * Example:
  *
- * acc
- *    →    Caius Mueller, fellow; 50$, 4        // 2 be changed a lot here
- *    →    Chantal Shannon, fellow; 100$, 3
+ * 3 to 5 years
+ *    →    Leilani Kouma, fellow; 150$, 3 // change
+ *    →    Harry Acosta, fellow; 100$, 5
  *   ...
  * office
  *    →    Reese Craft, head; 30$, 6
