@@ -1,4 +1,4 @@
-# DSBA Introduction to Programming // Final test resubmission
+# DSBA Introduction to Programming // Final test comission
 Fall semester 2019/20
 
 
