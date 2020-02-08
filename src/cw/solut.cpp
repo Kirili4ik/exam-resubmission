@@ -46,7 +46,8 @@
  *  - experience (string)
  *  - working days (sequence of strings)
  * All strings are limited in length and do not exceed 100 characters.
- * The attributes within a single line are separated by tab characters ('\t').
+ * The attributes within a single line are separated by semicolon characters ';'.
+
  *
  * The empty line occurred in the stream means the input completion.
  *
