@@ -54,9 +54,9 @@
  * Employee name, boss name and experience strings can contain spaces.
  *
  * Example:
- *      Caius Mueller;acc;fellow;101;Lila Haigh;Tue;Thu;Fri // 2be changed
+ *      Liyah Rosas;fellow;Manuel Carson;500;less than 3 years;Tue;Thu
  *      ...
- *      Lila Haigh;acc;mngr;103;Jeffery Amos;Mon;Tue;Thu;Fri;Sat // 2be changed
+ *      Leilani Kouma;fellow;Manuel Carson;450;3 to 5 years;Mon;Wed;Sat
  *      ...
  *
  *
