@@ -94,10 +94,9 @@ NameEmployeeMap loadAllEmployees(std::istream& istr)
  *
  * Example:
  *
- *      "less than 3 years" → { "Caius Mueller", "Chantal Shannon", "Jeffery Amos",
- *                "Lila Haigh" } // 2 be changed
+ *      "3 to 5 years" → { "Keagan Ahmed", "Leilani Kouma", "Louisa Barton"}
  *      ...
- *      "more than 8 years" → { "Reese Craft" } // 2be changed
+ *      "more than 8 years" → { "Shanai Bowman", "Wyatt Richards"}
  *      ...
  */
 ExpEmplMap groupByExp(const NameEmployeeMap& team)
@@ -131,12 +130,14 @@ ExpEmplMap groupByExp(const NameEmployeeMap& team)
  * Example:
  *
  * 3 to 5 years
- *    →    Leilani Kouma, fellow; 150$, 3 // change
- *    →    Harry Acosta, fellow; 100$, 5
+ *    →    Keagan Ahmed, prog; 330, 3
+ *    →    Leilani Kouma, fellow; 150, 3
+ *    →    Louisa Barton, prog; 300, 3
  *   ...
- * office
- *    →    Reese Craft, head; 30$, 6
- *   ...
+ * more than 8 years
+ *    →    Shanai Bowman, head; 200, 5
+ *    →    Wyatt Richards, head; 200, 6
+ *
  *
  * Hint: use team to collect all necessary data about an employee.
  */
@@ -174,8 +175,8 @@ void outputStrSet(std::ostream& ostr, const StrSet& ss)
  * If an employee does not have any subordinates, returns empty set.
  *
  * Example:
- *      input: "Jeffery Amos"
- *      return: {"Caius Mueller", "Chantal Shannon", "Lila Haigh"} // 2be changed
+ *      input: "Harry Acosta"
+ *      return: {"Leilani Kouma", "Liyah Rosas", "Manuel Carson"}
  */
 StrSet selectSubordinatesByName(const std::string& boss, const NameEmployeeMap& team)
 {
