@@ -45,7 +45,7 @@ void test3()
     std::getline(inpFile, boss);
     NameEmployeeMap team = loadAllEmployees(inpFile);
 
-    StrSet subs1 = selectSubordinates(boss, team);
+    StrSet subs1 = selectSubordinatesByName(boss, team);
     outputStrSet(std::cout, subs1);
 }
 
