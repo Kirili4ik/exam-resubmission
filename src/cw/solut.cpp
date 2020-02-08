@@ -177,7 +177,7 @@ void outputStrSet(std::ostream& ostr, const StrSet& ss)
  *      input: "Jeffery Amos"
  *      return: {"Caius Mueller", "Chantal Shannon", "Lila Haigh"} // 2be changed
  */
-StrSet selectSubordinates(const std::string& boss, const NameEmployeeMap& team)
+StrSet selectSubordinatesByName(const std::string& boss, const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
 }
