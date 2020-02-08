@@ -51,4 +51,4 @@ ExpEmplMap groupByExp(const NameEmployeeMap& team);
 void printExpEmplMap(std::ostream& ostr, const ExpEmplMap& expList,
                                  const NameEmployeeMap& team);
 void outputStrSet(std::ostream& ostr, const StrSet& ss);
-StrSet selectSubordinates(const std::string& boss, const NameEmployeeMap& team);
+StrSet selectSubordinatesByName(const std::string& boss, const NameEmployeeMap& team);
