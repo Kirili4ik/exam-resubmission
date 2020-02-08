@@ -44,7 +44,7 @@
  *  - boss (string)
  *  - salary (int, 0 for interns)
  *  - experience (string)
- *  - working days (sequence of strings)
+ *  - working days (sequence of strings, not empty)
  * All strings are limited in length and do not exceed 100 characters.
  * The attributes within a single line are separated by semicolon characters ';'.
 
