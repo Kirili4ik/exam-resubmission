@@ -140,7 +140,7 @@ ExpEmplMap groupByExp(const NameEmployeeMap& team)
  *
  * Hint: use team to collect all necessary data about an employee.
  */
-void printExpEmplMap(std::ostream& ostr, const ExpEmplMap& depList,
+void printExpEmplMap(std::ostream& ostr, const ExpEmplMap& expList,
                                   const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
