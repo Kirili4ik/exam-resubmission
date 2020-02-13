@@ -26,10 +26,10 @@ typedef std::set<std::string> StrSet;
 /// An Employee structure.
 struct Employee {
     std::string name;
-    std::string department;
     std::string position;
-    int room_number;
     std::string boss;
+    int salary;
+    std::string experience;
     StrSet workdays;
 };
 
@@ -40,15 +40,15 @@ typedef std::map<std::string, Employee> NameEmployeeMap;
 /// Maps strings to sets of strings. It is used for many purposes.
 typedef std::map<std::string, StrSet> Str2StrSet;
 
-/// Stores employees grouped by departments (alias for Str2StrSet).
-typedef Str2StrSet DepartEmplMap;
+/// Stores employees grouped by experience (alias for Str2StrSet).
+typedef Str2StrSet ExpEmplMap;
 
 
 
 // prototypes
-NameEmployeeMap loadEmployeeData(std::istream& istr);
-DepartEmplMap groupByDepartents(const NameEmployeeMap& team);
-void printDepartEmplMap(std::ostream& ostr, const DepartEmplMap& depList,
+NameEmployeeMap loadAllEmployees(std::istream& istr);
+ExpEmplMap groupByExp(const NameEmployeeMap& team);
+void printExpEmplMap(std::ostream& ostr, const ExpEmplMap& expList,
                                  const NameEmployeeMap& team);
 void outputStrSet(std::ostream& ostr, const StrSet& ss);
-StrSet selectSubordinates(const std::string& boss, const NameEmployeeMap& team);
+StrSet selectSubordinatesByName(const std::string& boss, const NameEmployeeMap& team);

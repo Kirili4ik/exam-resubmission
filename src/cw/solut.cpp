@@ -40,22 +40,23 @@
  * A given stream (highly likely represented by a text file) provides one
  * employee record per line. A line consists of:
  *  - employee's name (string)
- *  - department (string)
  *  - position (string)
- *  - room number (positive integer / 0 if missing)
  *  - boss (string)
- *  - working days (sequence of strings)
+ *  - salary (int, 0 for interns)
+ *  - experience (string)
+ *  - working days (sequence of strings, not empty)
  * All strings are limited in length and do not exceed 100 characters.
- * The attributes within a single line are separated by tab characters ('\t').
+ * The attributes within a single line are separated by semicolon characters ';'.
+
  *
  * The empty line occurred in the stream means the input completion.
  *
- * Employee name and boss name strings can contain spaces.
+ * Employee name, boss name and experience strings can contain spaces.
  *
  * Example:
- *      Caius Mueller;acc;fellow;101;Lila Haigh;Tue;Thu;Fri
+ *      Liyah Rosas;fellow;Manuel Carson;500;less than 3 years;Tue;Thu
  *      ...
- *      Lila Haigh;acc;mngr;103;Jeffery Amos;Mon;Tue;Thu;Fri;Sat
+ *      Leilani Kouma;fellow;Manuel Carson;450;3 to 5 years;Mon;Wed;Sat
  *      ...
  *
  *
@@ -65,7 +66,7 @@
  * It is highly recommended to decompose the method properly. Solve each
  * subtasks by using individual functions.
  */
-NameEmployeeMap loadEmployeeData(std::istream& istr)
+NameEmployeeMap loadAllEmployees(std::istream& istr)
 {
     NameEmployeeMap mp;
 
@@ -80,63 +81,67 @@ NameEmployeeMap loadEmployeeData(std::istream& istr)
 // !! → Both following methods must be provided as a single submission! ←
 
 /*!
- * \brief function makes a selection of epmployees distributed by departments.
+ * \brief function makes a selection of epmployees distributed by experience.
  *
- * \param team is a map of employees (e.g. created by loadData() function).
- * \return a collection of employees (names) distributed by deparments.
+ * \param team is a map of employees (e.g. created by loadAllEmployees() function).
+ * \return a collection of employees (names) distributed by experience.
  *
  * Cost: »»»0.25«««
  *
- * Function makes a map (of type DepartEmplMap) where a key represents a
- * department name (string) and the corresponding value represents a set of
- * employee names (StrSet) working in the department.
+ * Function makes a map (of type ExpEmplMap) where a key represents
+ * experience(string) and the corresponding value represents a set of
+ * employee names (StrSet) with such an experience.
  *
  * Example:
  *
- *      "acc" → { "Caius Mueller", "Chantal Shannon", "Jeffery Amos",
- *                "Lila Haigh" }
+ *      "3 to 5 years" → { "Keagan Ahmed", "Leilani Kouma", "Louisa Barton"}
  *      ...
- *      "office" → { "Reese Craft" }
+ *      "more than 8 years" → { "Shanai Bowman", "Wyatt Richards"}
  *      ...
  */
-DepartEmplMap groupByDepartents(const NameEmployeeMap& team)
+ExpEmplMap groupByExp(const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
 }
 
 /*!
  * \brief Function outputs information about employees distributed by
- * departments into a given stream.
+ * experience into a given stream.
  *
  * \param ostr is a stream for outputting.
- * \param depList is a collection of employees (by their names) distributes by
- * departments. E.g., such a map can be obtained as a result of
- * selectEmployeesInDepartents() function.
- * \param team is a map of employees (e.g. created by loadData() function).
+ * \param expList is a collection of employees (by their names) distributed by
+ * experience. E.g., such a map can be obtained as a result of
+ * groupByExp() function.
+ * \param team is a map of employees (e.g. created by loadAllEmployees() function).
  *
  * Cost: »»»0.35«««
  *
- * Function outputs a department name and then a set of employees working in
- * the department. Employees are output using the following rules:
+ * Function outputs experience and then a set of employees with such
+ * a level of experience (alphabetical order). Employees are output 
+ * using the following rules:
  *  - the alphabetical order of employee names is used;
  *  - one employee per line preceded by a tab ('\t') character;
  *  - the employee's name is succeded by the employee's position, separated by
- *    a comma with a space; then a semicolon character with a space, followed by
- *    a number of working days with "w/d" suffix.
+ *    a comma with a space; then a semicolon character with a space. Then daily rate, 
+ *    salary for a day of work with "$" suffix. For ex.: if salary is 300 (a week)
+ *    with 3 days of work, this field should be "100$" followed by a comma and a space. Then
+ *    a number of working days.
  *
  * Example:
  *
- * acc
- *    →    Caius Mueller, fellow; 3 w/d
- *    →    Chantal Shannon, fellow; 3 w/d
+ * 3 to 5 years
+ *    →    Keagan Ahmed, prog; 330, 3
+ *    →    Leilani Kouma, fellow; 150, 3
+ *    →    Louisa Barton, prog; 300, 3
  *   ...
- * office
- *    →    Reese Craft, head; 5 w/d
- *   ...
+ * more than 8 years
+ *    →    Shanai Bowman, head; 200, 5
+ *    →    Wyatt Richards, head; 200, 6
+ *
  *
  * Hint: use team to collect all necessary data about an employee.
  */
-void printDepartEmplMap(std::ostream& ostr, const DepartEmplMap& depList,
+void printExpEmplMap(std::ostream& ostr, const ExpEmplMap& expList,
                                   const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
@@ -162,7 +167,7 @@ void outputStrSet(std::ostream& ostr, const StrSet& ss)
  * \brief For a given Employee, finds all their direct and indirect subordinates.
  *
  * \param boss is an employee for subordinates are found.
- * \param team is a map of employees (e.g. created by loadData() function).
+ * \param team is a map of employees (e.g. created by loadAllEmployees() function).
  *
  * Cost: »»»16 BP«««
  *
@@ -170,10 +175,10 @@ void outputStrSet(std::ostream& ostr, const StrSet& ss)
  * If an employee does not have any subordinates, returns empty set.
  *
  * Example:
- *      input: "Jeffery Amos"
- *      return: {"Caius Mueller", "Chantal Shannon", "Lila Haigh"}
+ *      input: "Harry Acosta"
+ *      return: {"Leilani Kouma", "Liyah Rosas", "Manuel Carson"}
  */
-StrSet selectSubordinates(const std::string& boss, const NameEmployeeMap& team)
+StrSet selectSubordinatesByName(const std::string& boss, const NameEmployeeMap& team)
 {
     // TODO: provide an implementation here...
 }

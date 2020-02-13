@@ -16,12 +16,12 @@
 void test1()
 {
     std::ifstream inpFile("input.txt");
-    NameEmployeeMap team = loadEmployeeData(inpFile);
+    NameEmployeeMap team = loadAllEmployees(inpFile);
     for (const std::pair<std::string, Employee>& empl : team)
     {
         std::cout << empl.second.name << " " << empl.second.position << " "
-                  << empl.second.department << " " << empl.second.room_number << " "
-                  << empl.second.boss << " " << empl.second.workdays.size () << "\n";
+                  << empl.second.boss << " " << empl.second.salary << " "
+                  << empl.second.experience << " " << empl.second.workdays.size () << "\n";
 
     }
 }
@@ -30,10 +30,10 @@ void test1()
 void test2()
 {
     std::ifstream inpFile("input.txt");
-    NameEmployeeMap team = loadEmployeeData(inpFile);
+    NameEmployeeMap team = loadAllEmployees(inpFile);
 
-    DepartEmplMap depList = groupByDepartents(team);
-    printDepartEmplMap(std::cout, depList, team);
+    ExpEmplMap expList = groupByExp(team);
+    printExpEmplMap(std::cout, expList, team);
 }
 
 
@@ -43,9 +43,9 @@ void test3()
                                                 // is input-task3.txt !!!
     std::string boss;
     std::getline(inpFile, boss);
-    NameEmployeeMap team = loadEmployeeData(inpFile);
+    NameEmployeeMap team = loadAllEmployees(inpFile);
 
-    StrSet subs1 = selectSubordinates(boss, team);
+    StrSet subs1 = selectSubordinatesByName(boss, team);
     outputStrSet(std::cout, subs1);
 }
 
